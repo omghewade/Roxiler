@@ -1,0 +1,30 @@
+{
+  "name": "roxiler-store-rating-system",
+  "version": "1.0.0",
+  "description": "Full-stack Store Rating Web Application with Role-Based Access Control",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "seed": "npm --prefix backend run seed",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend dev",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "sqlite",
+    "jwt",
+    "rbac",
+    "store-ratings"
+  ],
+  "author": "ROXILER",
+  "license": "MIT"
+}
